@@ -1,5 +1,6 @@
 package com.example.youzhedou.orderfood;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -69,7 +70,10 @@ public class AllFoodList extends AppCompatActivity {
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(AllFoodList.this,""+local.getName(),Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(AllFoodList.this,""+local.getName(),Toast.LENGTH_SHORT).show();
+                        Intent foodDetails = new Intent(AllFoodList.this,FoodDetails.class);
+                        foodDetails.putExtra("FoodId",adapter.getRef(position).getKey());
+                        startActivity(foodDetails);
                     }
                 });
             }
