@@ -28,6 +28,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     //add library
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
+
     compile 'com.cepheuen.elegant-number-button:lib:1.0.2'
     compile 'com.android.support:design:26.+'
     compile 'com.android.support:appcompat-v7:26.+'
