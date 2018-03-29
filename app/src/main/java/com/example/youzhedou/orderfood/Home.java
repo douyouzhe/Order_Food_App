@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.example.youzhedou.orderfood.Common.Common;
 import com.example.youzhedou.orderfood.Interface.ItemClickListener;
 import com.example.youzhedou.orderfood.Model.Category;
+import com.example.youzhedou.orderfood.Model.Order;
 import com.example.youzhedou.orderfood.ViewHolder.MenuViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
@@ -138,12 +139,18 @@ public class Home extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_menu) {
-            // Handle the camera action
+
         } else if (id == R.id.nav_cart) {
+            Intent cartIntent = new Intent(Home.this, Cart.class);
+            startActivity(cartIntent);
 
         } else if (id == R.id.nav_order) {
-
+            Intent orderIntent = new Intent(Home.this, OrderStatus.class);
+            startActivity(orderIntent);
         } else if (id == R.id.nav_logout) {
+            Intent signinIntent = new Intent(Home.this, SignIn.class);
+            signinIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(signinIntent);
 
         }
 
