@@ -17,3 +17,7 @@ Server side:
 - add/remove/edit food details
 - remove/edit order status
 - path planning between host and customers
+
+client side: https://github.com/douyouzhe/Order_Food_App
+
+server side: https://github.com/douyouzhe/Order_Food_App_Server_Side
